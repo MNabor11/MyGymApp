@@ -16,7 +16,8 @@ def exerciseFunction():
     exercise_Weight = float(input('How much weight did you use? '))
     print(
         f'Awesome, you did {exercise_Type} for {exercise_Set} sets of {exercise_Rep}, for {exercise_Weight} lbs.')
-    print(f'A total of {exercise_Weight*exercise_Set}')
+    totalWeight = (exercise_Set*exercise_Rep)*exercise_Weight
+    print(f'A total of {totalWeight} lbs.')
     return {
         'Workout': exercise_Type,
         'Sets': exercise_Set,
@@ -37,7 +38,7 @@ while (True):
         case 2:
             for x in workoutList:
                 print(
-                    f'{x['Workout']} for {x['Sets']} sets of {x['reps']} and {x['Weight']}')
+                    f'\n{x['Workout']} for {x['Sets']} sets of {x['reps']} and {x['Weight']}\n')
         case 3:
             print('Exiting program...')
             break
